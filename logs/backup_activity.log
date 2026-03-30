@@ -1,7 +1,0 @@
-[2026-03-30 13:48:27] INFO: Initiating backup for database: postgres (Host: 127.0.0.1)
-[2026-03-30 13:49:08] INFO: Initiating backup for database: postgre (Host: 127.0.0.1)
-[2026-03-30 13:51:47] INFO: Initiating backup for database: postgre (Host: 127.0.0.1)
-[2026-03-30 13:52:53] INFO: Initiating backup for database: postgre (Host: 127.0.0.1)
-[2026-03-30 13:53:17] INFO: Initiating backup for database: postgre (Host: 127.0.0.1)
-[2026-03-30 13:53:17] INFO: pg_dump error: pg_dump: error: connection to server at "127.0.0.1", port 5432 failed: FATAL:  database "postgre" does not exist
-
