@@ -1,3 +1,4 @@
+from compression import gzip
 import subprocess
 import os
 import psycopg2 
@@ -42,13 +43,16 @@ class PostgresEngine:
                 self.config['dbname']
             ]
 
-            # Run the command
-            result = subprocess.run(
-                command, 
-                env=env, 
-                capture_output=True, 
-                text=True
-            )
+            # We open the destination file in write-binary mode with gzip
+            with gzip.open(destination_path, 'wb') as f:
+                # Run pg_dump and pipe stdout directly into our gzip file
+                result = subprocess.run(
+                    command, 
+                    env=env, 
+                    stdout=f, 
+                    stderr=subprocess.PIPE, 
+                    text=True
+                )
 
             if result.returncode == 0:
                 return True, f"Backup created: {destination_path}"
