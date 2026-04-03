@@ -2,5 +2,21 @@
 .venv/
 venv/
 env/
+.env
 backups/
 logs/
+# Byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+# Distribution files
+dist/
+build/
+*.egg-info/
+# IDE files
+.idea/
+.vscode/
+# OS files
+.DS_Store
+Thumbs.db
